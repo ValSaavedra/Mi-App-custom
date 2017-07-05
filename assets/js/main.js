@@ -1,5 +1,3 @@
-
-<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '262841527527924',
@@ -17,4 +15,18 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>
+
+
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+
